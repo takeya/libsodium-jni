@@ -187,11 +187,18 @@ public class SodiumJNI {
   public final static native int crypto_hash_sha512_init(byte[] jarg1);
   public final static native int crypto_hash_sha512_update(byte[] jarg1, byte[] jarg2, int jarg3);
   public final static native int crypto_hash_sha512_final(byte[] jarg1, byte[] jarg2);
+
+    public final static native int crypto_kdf_bytes_max();
+    public final static native int crypto_kdf_bytes_min();
+    public final static native int crypto_kdf_contextbytes();
+    public final static native int crypto_kdf_keybytes();
+    public final static native int crypto_kdf_primitive();
+    public final static native int crypto_kdf_derive_from_key();
+
   public final static native int crypto_onetimeauth_poly1305_bytes();
   public final static native int crypto_onetimeauth_poly1305_keybytes();
   public final static native int crypto_onetimeauth_poly1305(byte[] jarg1, byte[] jarg2, int jarg3, byte[] jarg4);
   public final static native int crypto_onetimeauth_poly1305_verify(byte[] jarg1, byte[] jarg2, int jarg3, byte[] jarg4);
-  public final static native int crypto_onetimeauth_poly1305_statebytes();
   public final static native int crypto_onetimeauth_poly1305_init(byte[] jarg1, byte[] jarg2);
   public final static native int crypto_onetimeauth_poly1305_update(byte[] jarg1, byte[] jarg2, int jarg3);
   public final static native int crypto_onetimeauth_poly1305_final(byte[] jarg1, byte[] jarg2);
@@ -218,17 +225,6 @@ public class SodiumJNI {
   public final static native int crypto_pwhash_str(byte[] jarg1, byte[] jarg2, int jarg3, int jarg4, int jarg5);
   public final static native int crypto_pwhash_str_verify(byte[] jarg1, byte[] jarg2, int jarg3);
   public final static native byte[] crypto_pwhash_primitive();
-  public final static native int crypto_pwhash_scryptsalsa208sha256_saltbytes();
-  public final static native int crypto_pwhash_scryptsalsa208sha256_strbytes();
-  public final static native byte[] crypto_pwhash_scryptsalsa208sha256_strprefix();
-  public final static native int crypto_pwhash_scryptsalsa208sha256_opslimit_interactive();
-  public final static native int crypto_pwhash_scryptsalsa208sha256_memlimit_interactive();
-  public final static native int crypto_pwhash_scryptsalsa208sha256_opslimit_sensitive();
-  public final static native int crypto_pwhash_scryptsalsa208sha256_memlimit_sensitive();
-  public final static native int crypto_pwhash_scryptsalsa208sha256(byte[] jarg1, int jarg2, byte[] jarg3, int jarg4, byte[] jarg5, int jarg6, int jarg7);
-  public final static native int crypto_pwhash_scryptsalsa208sha256_str(byte[] jarg1, byte[] jarg2, int jarg3, int jarg4, int jarg5);
-  public final static native int crypto_pwhash_scryptsalsa208sha256_str_verify(byte[] jarg1, byte[] jarg2, int jarg3);
-  public final static native int crypto_pwhash_scryptsalsa208sha256_ll(byte[] jarg1, int jarg2, byte[] jarg3, int jarg4, int jarg5, int jarg6, int jarg7, byte[] jarg8, int jarg9);
   public final static native int crypto_scalarmult_curve25519_bytes();
   public final static native int crypto_scalarmult_curve25519_scalarbytes();
   public final static native int crypto_scalarmult_curve25519(byte[] jarg1, byte[] jarg2, byte[] jarg3);

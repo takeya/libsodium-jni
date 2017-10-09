@@ -737,10 +737,6 @@ public class Sodium {
     return SodiumJNI.crypto_onetimeauth_poly1305_verify(h, in, inlen, k);
   }
 
-  public static int crypto_onetimeauth_poly1305_statebytes() {
-    return SodiumJNI.crypto_onetimeauth_poly1305_statebytes();
-  }
-
   public static int crypto_onetimeauth_poly1305_init(byte[] state, byte[] key) {
     return SodiumJNI.crypto_onetimeauth_poly1305_init(state, key);
   }
@@ -843,50 +839,6 @@ public class Sodium {
 
   public static byte[] crypto_pwhash_primitive() {
     return SodiumJNI.crypto_pwhash_primitive();
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_saltbytes() {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_saltbytes();
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_strbytes() {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_strbytes();
-  }
-
-  public static byte[] crypto_pwhash_scryptsalsa208sha256_strprefix() {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_strprefix();
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_opslimit_interactive() {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_opslimit_interactive();
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_memlimit_interactive() {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_memlimit_interactive();
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_opslimit_sensitive() {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_opslimit_sensitive();
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_memlimit_sensitive() {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_memlimit_sensitive();
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256(byte[] out, int outlen, byte[] passwd, int passwdlen, byte[] salt, int opslimit, int memlimit) {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256(out, outlen, passwd, passwdlen, salt, opslimit, memlimit);
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_str(byte[] out, byte[] passwd, int passwdlen, int opslimit, int memlimit) {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_str(out, passwd, passwdlen, opslimit, memlimit);
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_str_verify(byte[] str, byte[] passwd, int passwdlen) {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_str_verify(str, passwd, passwdlen);
-  }
-
-  public static int crypto_pwhash_scryptsalsa208sha256_ll(byte[] passwd, int passwdlen, byte[] salt, int saltlen, int N, int r, int p, byte[] buf, int buflen) {
-    return SodiumJNI.crypto_pwhash_scryptsalsa208sha256_ll(passwd, passwdlen, salt, saltlen, N, r, p, buf, buflen);
   }
 
   public static int crypto_scalarmult_curve25519_bytes() {
