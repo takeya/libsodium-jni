@@ -977,6 +977,29 @@ int crypto_hash_sha512_final(crypto_hash_sha512_state *state,
                              unsigned char *out);
 
 /*
+    KDF
+ */
+
+size_t crypto_kdf_bytes_min(void);
+
+size_t crypto_kdf_bytes_max(void);
+
+size_t crypto_kdf_contextbytes(void);
+
+size_t crypto_kdf_keybytes(void);
+
+const char * crypto_kdf_primitive(void);
+
+int crypto_kdf_derive_from_key(unsigned char *subkey,
+                               size_t subkey_len,
+                               uint64_t subkey_id,
+                               const char ctx[crypto_kdf_CONTEXTBYTES],
+                               const unsigned char key[crypto_kdf_KEYBYTES]);
+
+void crypto_kdf_keygen(unsigned char k[crypto_kdf_KEYBYTES]);
+
+
+/*
     Onetime-Auth Poly1305
 */
 

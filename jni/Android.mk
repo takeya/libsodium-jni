@@ -57,7 +57,10 @@ LOCAL_LDFLAGS  += -fPIC
 LOCAL_DISABLE_FATAL_LINKER_WARNINGS := true
 LOCAL_CFLAGS   += -Wall -g -pedantic -std=c99
 
-LOCAL_C_INCLUDES += $(abspath $(LOCAL_PATH))/../libsodium/libsodium-android-$(MY_ARCH_FOLDER)/include ../libsodium/libsodium-android-$(MY_ARCH_FOLDER)/include/sodium /usr/local/include
+LOCAL_C_INCLUDES += $(abspath $(LOCAL_PATH))/../libsodium/libsodium-android-$(MY_ARCH_FOLDER)/include
+LOCAL_C_INCLUDES += ../libsodium/libsodium-android-$(MY_ARCH_FOLDER)/include/sodium
+LOCAL_C_INCLUDES += /usr/local/include
+LOCAL_C_INCLUDES += $(abspath $(LOCAL_PATH))/../libsodium/libsodium-toolchain-$(MY_ARCH_FOLDER)/sysroot/usr/include
 #LOCAL_STATIC_LIBRARIES += android_native_app_glue sodium
 LOCAL_STATIC_LIBRARIES += sodium
 LOCAL_DISABLE_FATAL_LINKER_WARNINGS := true

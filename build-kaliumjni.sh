@@ -8,5 +8,5 @@ pushd jni
 ./compile.sh
 popd
 
-mvn -q clean install
+mvn -q clean install -DskipTests
 ./singleTest.sh
